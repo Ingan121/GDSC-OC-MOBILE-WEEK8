@@ -5,6 +5,8 @@ import 'package:week8/const/text.dart';
 import 'package:week8/view/multiple_corgi_images_page.dart';
 import 'package:week8/view/multiple_random_images_page.dart';
 
+import 'multiple_pug_images_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -38,6 +40,11 @@ class HomePage extends StatelessWidget {
               destination: MultipleCorgiImagesPage(),
             ),
             // TODO 강아지 API 사용해서 아무 기능이나 추가해 보기
+            SizedBox(height: 10),
+            CustomNavigationButton(
+              title: "랜덤으로 퍼그 사진들 불러오기",
+              destination: MultiplePugImagesPage(),
+            ),
           ],
         ),
       ),

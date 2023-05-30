@@ -32,4 +32,18 @@ class ApiService {
       return [];
     }
   }
+
+  Future<List<dynamic>> multiplePugImages() async {
+    final Uri url = Uri.parse("$baseUrl/breed/pug/images/random/50");
+
+    final response = await http.get(url);
+
+    try {
+      print(jsonDecode(response.body)["message"]);
+      return jsonDecode(response.body)["message"];
+    } catch (e) {
+      print(e.toString());
+      return [];
+    }
+  }
 }
